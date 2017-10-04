@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter a6000, $(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE), a6000)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -118,5 +118,6 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
 	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 
+endif
 endif
 endif
