@@ -17,6 +17,7 @@ ifneq ($(filter a6000, $(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
+ifneq ($(filter Lenovo,$(TARGET_VENDOR)),)
 ifneq ($(filter msm8916 msm8939,$(TARGET_BOARD_PLATFORM_VARIANT)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
